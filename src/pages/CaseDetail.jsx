@@ -702,8 +702,10 @@ export default function CaseDetail() {
                         padding: "0.25rem 0.5rem",
                       }}
                     >
-                      {doc.evidence_type ? doc.evidence_type.toUpperCase() : 'UNKNOWN'}
+ 
+                                              {doc.evidence_type ? doc.evidence_type.toUpperCase() : 'UNKNOWN'}
                     </span>
+                
                     <span
                       className="badge"
                       style={{
