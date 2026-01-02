@@ -84,7 +84,7 @@ export default function CaseDetail() {
       }
       alert(
         `${
-          evidenceType.charAt(0).toUpperCase() + evidenceType.slice(1)
+          evidenceType && evidenceType.charAt(0).toUpperCase() + evidenceType.slice(1)
         } evidence uploaded successfully!`
       );
     } catch (error) {
@@ -702,7 +702,7 @@ export default function CaseDetail() {
                         padding: "0.25rem 0.5rem",
                       }}
                     >
-                      {doc.evidence_type.toUpperCase()}
+                      {doc.evidence_type ? doc.evidence_type.toUpperCase() : 'UNKNOWN'}
                     </span>
                     <span
                       className="badge"
@@ -712,7 +712,7 @@ export default function CaseDetail() {
                             ? "#fbbf24"
                             : doc.analysis_status === "metadata_extracted"
                             ? "#10b981"
-                            : "#3b82f6",
+                            : "#367ef1ff",
                         color: "white",
                         fontSize: "0.7rem",
                         padding: "0.25rem 0.5rem",
